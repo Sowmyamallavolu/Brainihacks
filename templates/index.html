@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='index.css') }}">
+    <link rel="icon" href="{{ url_for('static',filename='heart.jpeg') }}" type="image/x-icon">
+</head>
+<body>
+<div class="login-box">
+    <h2>HeartDisease</h2>
+    <form action="/submit" method="POST">
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label>Age</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label>Sex</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label>Chest pain</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label>Cholestrol</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label>fbs</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label>thalach</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label>exang</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label>oldpeak</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label>ca</label>
+      </div>
+      <a href="{{ url_for('templates',filename='result.html') }}">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </a>
+    </form>
+  </div>
+</body>
+</html>

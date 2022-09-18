@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Result page</title>
+        
+    </head>
+    <body>
+        <div class="background-image">
+            <br><br>
+            <h2><a href="/"><p  style="text-align:center;" >Heart Disease Prediction</p></a></h2>
+            <h2>Results</h2>
+            <p style="color:rgb(181, 176, 28)">{% if prediction == 1%}</p>
+            <h2 style="color:rgb(181, 176, 28);">chances of getting heart disease</h2>
+            <p style="color:rgb(181, 176, 28)">{% elif prediction == 0%}</p>
+            <h2 style="color:rgb(181, 176, 28);">don't have heart disease</h2>
+            <p style="color:rgb(181, 176, 28)">{% endif %}</p>
+        </div>
+        
+    </body>
+    <style>
+        .color{
+            font:white;
+        }
+        .background-image{
+            background-image:url('{{heart bg.jpg}}');
+            background-size: cover;
+            height:100%;
+        }
+    </style>
+    
+</html>
