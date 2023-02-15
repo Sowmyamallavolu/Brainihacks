@@ -70,6 +70,3 @@ for j in range(len(df2)):
   if(df2['predicted_values'].loc[j]!=df2['Actual_values'].loc[j]):
     print(df2['predicted_values'].loc[j]," ",df2['Actual_values'].loc[j]," ",j) 
     
-import pickle
-pickle.dump(classifier,open('model.pkl','wb'))
-pickle.dump(sc,open('sc.pkl','wb'))       
