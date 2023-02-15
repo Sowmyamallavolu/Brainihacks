@@ -166,3 +166,25 @@ html {
     }
   }
   
+  H1{
+    color: #fff;
+    
+  }
+  .b1{
+    background-color:#03e9f4;
+    color: black;
+    border-radius: 7px;
+    width: 90px;
+    height:30px;
+    text-align: center;
+    font-style: "Roboto";
+    font-size: 20px;
+    font-weight: bold;
+    
+  }
+textarea{
+  background-color:#243b55 ; color: #fff ; text-align: center;justify-content: center;
+}
+.b2{
+  text-align: center;
+}
