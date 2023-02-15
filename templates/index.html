@@ -1,60 +1,72 @@
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heart Disease Prediction</title>
-    <link rel="stylesheet" href="{{ url_for('static',filename='index.css') }}">
-    <link rel="icon" href="{{ url_for('static',filename='heart.jpeg') }}" type="image/x-icon">
+<title>Heart Disease Prediction</title>
+<link rel="stylesheet" href="static/index.css">
+<!-- <link rel="image" href="static/heart.jpeg">
+<link rel="stylesheet" href="{{ url_for('static',filename='index.css') }}"> -->
+<link rel="icon" href="{{ url_for('static',filename='heart.jpeg') }}" type="image/x-icon"> 
 </head>
+
 <body>
-<div class="login-box">
-    <h2>HeartDisease</h2>
-    <form action="/submit" method="POST">
-      <div class="user-box">
-        <input type="text" name="" required="">
-        <label>Age</label>
-      </div>
-      <div class="user-box">
-        <input type="text" name="" required="">
-        <label>Sex</label>
-      </div>
-      <div class="user-box">
-        <input type="text" name="" required="">
-        <label>Chest pain</label>
-      </div>
-      <div class="user-box">
-        <input type="text" name="" required="">
-        <label>Cholestrol</label>
-      </div>
-      <div class="user-box">
-        <input type="text" name="" required="">
-        <label>fbs</label>
-      </div>
-      <div class="user-box">
-        <input type="text" name="" required="">
-        <label>thalach</label>
-      </div>
-      <div class="user-box">
-        <input type="text" name="" required="">
-        <label>exang</label>
-      </div>
-      <div class="user-box">
-        <input type="text" name="" required="">
-        <label>oldpeak</label>
-      </div>
-      <div class="user-box">
-        <input type="text" name="" required="">
-        <label>ca</label>
-      </div>
-      <a href="{{ url_for('templates',filename='result.html') }}">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Submit
-      </a>
-    </form>
-  </div>
+    <div class="login-box" >
+        <h2>Heart Disease</h2>
+        <form id="form" action="\predict" method="POST">
+            <div class="user-box" >
+                <input type="text" id="Age" name="Age" value={{ Age }}>
+                <label for="Age">Age</label>
+            </div>
+            <div class="user-box">
+                <input type="text" id="Sex" name="Sex" value={{ sex }}>
+                <label for="Sex">Sex</label>
+            </div>
+            <div class="user-box">
+                <input type="text" id="Chest pain" name="Chest pain" value={{ chest_pain }}>
+                <label for ="Chest pain">Chest pain</label>
+                
+            </div>
+            <div class="user-box">
+                <input type="text" id="Cholestrol" name="Cholestrol" value={{ Cholestrol }}>
+                <label for="Cholestrol">Cholestrol</label>
+               
+            </div>
+            <div class="user-box" >
+                <input type="text" id="fbs" name="fbs" value={{ fbs }}>
+                <label for="fbs">fbs</label>
+            </div>
+            <div class="user-box">
+                <input type="text" id="hattack" name="hattack" value={{ hattack }}>
+                <label for="hattack">thalach</label>
+            </div>
+            <div class="user-box" >
+                <input type="text" id="exang" name="exang" value={{ exang}}>
+                <label for="exang">exang</label>
+            </div>
+            <div class="user-box" >
+                <input type="text" id="oldpeak" name="oldpeak" value={{ oldpeak }}>
+                <label for="oldpeak">oldpeak</label>
+            </div>
+            <div class="user-box" >
+                <input type="text" id="ca" name="ca" value={{ ca}}>
+                <label for="ca">ca (major no.of vesels)</label>
+            </div>
+            <div class="b2">
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    
+                    <input type="submit" id="submit"  class="b1">
+                  </a>
+            </div>
+        </form>
+        <label for="ans"><H1>Result is:</H1></label>
+        
+        <div>
+            <textarea d-flex flex-column justify-content-center rows="10" cols="70">{{ output_text }}</textarea>
+            
+        </div>
+    </div>
 </body>
+
 </html>
