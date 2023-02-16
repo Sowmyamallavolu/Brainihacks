@@ -30,3 +30,5 @@ DATA DESCRIPTION
 
 •    target: Heart disease (0 = no, 1 = yes)
 
+***Enter all the fields in integer format.***
+
